@@ -20,7 +20,7 @@ main {
 
 .column img,
 img {
-  max-width: 578px;
+  width: 100%;
   height: 648px;
   object-fit: cover
 }
@@ -88,9 +88,7 @@ main {
 }
 
 .layout__main {
-  max-width: 1440px;
   flex-direction: column;
-  margin: 100px;
   justify-items: center;
   padding-left: 16px
 }
@@ -98,7 +96,7 @@ main {
 .main__heading,
 .main__info,
 .main__tagline {
-  text-align: left;
+  text-align: center;
   padding-top: 20px;
   color: #fff;
   margin: 30px
@@ -131,22 +129,26 @@ main {
 
 .column {
   -ms-flex: 25%;
-  flex: 25%;
-  max-width: 25%;
   padding: 0 4px
 }
 
 .column img {
-  vertical-align: middle
+  vertical-align: middle;
+  width: 100%;
 }
 
 @media screen and (max-width:800px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .main__heading,
   .main__info {
     color: #000;
     margin-top: 20px;
-    padding-left: 100px
+    padding-left: 100px;
+
   }
 
   .layout__header a:not(:first-child) {
@@ -162,27 +164,25 @@ main {
     font-size: 40px
   }
 
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%
-  }
 
   .column img {
-    max-width: 617px;
-    height: 512px;
+    width: 100%;
     object-fit: cover;
     vertical-align: middle
   }
 }
 
 @media screen and (max-width:600px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .main__heading,
   .main__info {
     color: #000;
     margin-top: 20px;
-    padding-left: 100px
+    padding-left: 100px;
   }
 
   .layout__header.responsive {
@@ -201,15 +201,8 @@ main {
     text-align: left
   }
 
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%
-  }
 
   .column img {
-    max-width: 256px;
-    height: 284px;
     object-fit: cover;
     vertical-align: middle
   }
